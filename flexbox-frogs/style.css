@@ -14,3 +14,13 @@ body {
   .lillypad {
   	
   }
+
+  .flex {
+  	display: flex;
+  	height: 300px;
+  }
+
+  .child {
+  width: 100px;  
+  height: 100px; 
+  margin: auto;
