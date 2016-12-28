@@ -1,0 +1,9 @@
+#deals {
+  display: flex; 
+  flex-flow: row wrap;
+}
+
+.sale-item {
+  display: flex;        
+  flex-flow: column;   
+}
