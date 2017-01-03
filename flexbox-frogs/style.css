@@ -28,3 +28,18 @@
     height: 100px;
     margin: 10px;
 }
+
+.item1 {
+    -webkit-flex: 2;
+    flex: 2;
+}
+
+.item2 {
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.item3 {
+    -webkit-flex: 1;
+    flex: 1;
+}
