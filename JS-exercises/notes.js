@@ -5,8 +5,16 @@ function takeOrder(topping, crustType) {
   orderCount = orderCount + 1;
 }
 
-function getSubTotal(itemCount) {
-  return itemCount * 7.5;
+function getSubTotal(orderCount) {
+  return orderCount * 7.5;
+}
+
+function getTax() {
+  return getSubTotal(orderCount) * 0.06;
+}
+
+function getTotal() {
+  return getSubTotal(orderCount) + getTax();
 }
 
 takeOrder('bacon', 'thin');
@@ -14,4 +22,4 @@ takeOrder('pepperoni', 'regular');
 takeOrder('pesto', 'thin');
 
 console.log(getSubTotal(orderCount));
-
+console.log(getTotal());
