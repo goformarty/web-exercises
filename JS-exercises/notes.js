@@ -80,3 +80,21 @@ for (var i = 0; i < myPlaces.length; i++) {
 				}
     }
 }
+
+// WHILE STATEMENT
+/* while statement executes its statements as long as a specified condition evaluates to true. 
+while (condition)
+  statement
+*/
+
+  var cards = ['Diamond', 'Spade', 'Heart', 'Club'];
+
+var currentCard = 'Heart';
+
+while (currentCard !== 'Spade') {
+  console.log(currentCard);
+  var randomNumber = Math.floor(Math.random()*4);
+  currentCard = cards[randomNumber];
+}
+
+console.log('program found a spade!');
