@@ -36,3 +36,32 @@ var myApartment = function() {
 };
 
 myApartment();
+
+// LOOPS
+
+/* Loops offer a quick and easy way to do something repeatedly.
+
+The statements for loops provided in JavaScript are:
+
+for statement
+do...while statement
+while statement
+labeled statement
+break statement
+continue statement
+for...in statement
+for...of statement
+
+
+-- A for loop repeats until a specified condition evaluates to false. 
+
+for ([initialExpression]; [condition]; [incrementExpression])
+  statement
+*/
+
+var vacationSpots = [1, 2, 3];
+
+for (var i = vacationSpots.length -1; i >= 0; i--) {
+  console.log('I would love to visit ' + vacationSpots[i]);
+}
+
