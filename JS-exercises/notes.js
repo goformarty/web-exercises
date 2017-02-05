@@ -70,15 +70,15 @@ var myPlaces = ['Paris', 'New York', 'Barcelona'];
 var friendPlaces = ['Rome', 'Chicago', 'Paris'];
 
 for (var i = 0; i < myPlaces.length; i++) {
-    console.log(myPlaces[i]);
+  console.log(myPlaces[i]);
   
   for (var j = 0; j < friendPlaces.length; j++) {
-        console.log(friendPlaces[j]);
+    console.log(friendPlaces[j]);
     
     if (myPlaces[i] === friendPlaces[j]) {
-    			console.log('Match: ' + myPlaces[i]);
-				}
-    }
+     console.log('Match: ' + myPlaces[i]);
+   }
+ }
 }
 
 // WHILE STATEMENT
@@ -87,7 +87,7 @@ while (condition)
   statement
 */
 
-  var cards = ['Diamond', 'Spade', 'Heart', 'Club'];
+var cards = ['Diamond', 'Spade', 'Heart', 'Club'];
 
 var currentCard = 'Heart';
 
@@ -98,3 +98,21 @@ while (currentCard !== 'Spade') {
 }
 
 console.log('program found a spade!');
+
+// JQUERY
+
+var skillset = document.getElementsByClassName('skillset');
+
+
+function main() {
+  $('.skillset').hide();
+  $('.skillset').fadeIn(1000);
+  $('.projects').hide();
+  $('.projects-button').on('click', function() {
+      //$(this).next().toggle();
+      $(this).next().slideToggle(400);
+      $(this).toggleClass('active');
+      $(this).text('Projects Viewed');
+    });                      
+}                     
+$(document).ready(main);
