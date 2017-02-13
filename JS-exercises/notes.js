@@ -123,3 +123,15 @@ JavaScript is case-sensitive and uses the Unicode character set.
 In JavaScript, instructions are called statements and are separated by a semicolon (;)
 Spaces, tabs and newline characters are called whitespace.
 
+
+// Check if the user is ready to play!
+confirm("I am ready to play!");
+var age = prompt("What's your age");
+if (age < 13)
+{
+    console.log("Allowed, but I don't take responsibility");    
+}
+else
+{
+    console.log("Play on!");    
+}
