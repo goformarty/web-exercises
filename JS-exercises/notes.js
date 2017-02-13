@@ -119,9 +119,11 @@ $(document).ready(main);
 
 
 // JAVASCRIPT 
+/* 
 JavaScript is case-sensitive and uses the Unicode character set.
 In JavaScript, instructions are called statements and are separated by a semicolon (;)
-Spaces, tabs and newline characters are called whitespace.
+Spaces, tabs and newline characters are called whitespace. 
+*/
 
 
 // Check if the user is ready to play!
@@ -135,3 +137,27 @@ else
 {
     console.log("Play on!");    
 }
+
+
+// FUNCTIONS
+/* 
+A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:
+
+The name of the function.
+A list of arguments to the function, enclosed in parentheses and separated by commas.
+The JavaScript statements that define the function, enclosed in curly brackets, { }. 
+*/
+
+function square(number) {
+  return number * number;
+}
+
+/* Function expressions
+
+While the function declaration above is syntactically a statement, functions can also be created by a function expression. 
+Such a function can be anonymous; it does not have to have a name. 
+For example, the function square could have been defined as:
+*/
+
+var square = function(number) { return number * number; };
+var x = square(4); // x gets the value 16
