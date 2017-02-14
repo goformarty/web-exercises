@@ -182,3 +182,63 @@ For example, if you define the function square, you could call it as follows:
 */
 
 square(5);
+
+/* Functions must be in scope when they are called,
+but the function declaration can be hoisted (appear below the call in the code), 
+as in this example: */ 
+
+console.log(square); // square is hoisted with an initial value undefined.
+console.log(square(5)); // TypeError: square is not a function
+var square = function(n) { 
+  return n * n; 
+}
+
+/* A function can call itself. For example, here is a function that computes factorials recursively: */
+function factorial(n) {
+  if ((n === 0) || (n === 1))
+    return 1;
+  else
+    return (n * factorial(n - 1));
+}
+
+// You could then compute the factorials of one through five as follows:
+var a, b, c, d, e;
+a = factorial(1); // a gets the value 1
+b = factorial(2); // b gets the value 2
+c = factorial(3); // c gets the value 6
+d = factorial(4); // d gets the value 24
+e = factorial(5); // e gets the value 120
+
+/* Function scope
+Variables defined inside a function cannot be accessed from anywhere outside the function, 
+because the variable is defined only in the scope of the function. 
+However, a function can access all variables and functions defined inside the scope in which it is defined. 
+In other words, a function defined in the global scope can access all variables defined in the global scope. 
+A function defined inside another function can also access all variables defined in its parent function 
+and any other variable to which the parent function has access. */
+
+// The following variables are defined in the global scope
+var num1 = 20,
+    num2 = 3,
+    name = 'Chamahk';
+
+// This function is defined in the global scope
+function multiply() {
+  return num1 * num2;
+}
+
+multiply(); // Returns 60
+
+// A nested function example
+function getScore() {
+  var num1 = 2,
+      num2 = 3;
+  
+  function add() {
+    return name + ' scored ' + (num1 + num2);
+  }
+  
+  return add();
+}
+
+getScore(); // Returns "Chamahk scored 5"
