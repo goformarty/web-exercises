@@ -161,3 +161,24 @@ For example, the function square could have been defined as:
 
 var square = function(number) { return number * number; };
 var x = square(4); // x gets the value 16
+
+/* Function expressions are convenient when passing a function as an argument to another function. 
+
+In JavaScript, a function can be defined based on a condition. 
+For example, the following function definition defines myFunc only if num equals 0: */
+
+var myFunc;
+if (num === 0) {
+  myFunc = function(theObject) {
+    theObject.make = 'Toyota';
+  }
+}
+
+/* Calling functions
+Defining a function does not execute it. 
+Defining the function simply names the function and specifies what to do when the function is called. 
+Calling the function actually performs the specified actions with the indicated parameters. 
+For example, if you define the function square, you could call it as follows: 
+*/
+
+square(5);
