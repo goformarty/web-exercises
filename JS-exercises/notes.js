@@ -242,3 +242,40 @@ function getScore() {
 }
 
 getScore(); // Returns "Chamahk scored 5"
+
+/* Scope and the function stack
+Recursion
+A function can refer to and call itself. There are three ways for a function to refer to itself:
+
+1.the function's name
+2.arguments.callee
+3.an in-scope variable that refers to the function
+For example, consider the following function definition:
+*/
+var foo = function bar() {
+   // statements go here
+};
+
+/* Within the function body, the following are all equivalent:
+1. bar()
+2. arguments.callee()
+3. foo()
+
+A function that calls itself is called a recursive function. 
+In some ways, recursion is analogous to a loop. Both execute the same code multiple times, 
+and both require a condition (to avoid an infinite loop, or rather, infinite recursion in this case). 
+For example, the following loop:
+*/
+var x = 0;
+while (x < 10) { // "x < 10" is the loop condition
+   // do stuff
+   x++;
+}
+// can be converted into a recursive function and a call to that function: 
+function loop(x) {
+  if (x >= 10) // "x >= 10" is the exit condition (equivalent to "!(x < 10)")
+    return;
+  // do stuff
+  loop(x + 1); // the recursive call
+}
+loop(0);
