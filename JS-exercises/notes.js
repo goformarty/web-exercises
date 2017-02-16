@@ -279,3 +279,29 @@ function loop(x) {
   loop(x + 1); // the recursive call
 }
 loop(0);
+
+/* Compared to the function loop, each recursive call itself makes many recursive calls here.
+
+It is possible to convert any recursive algorithm to a non-recursive one, 
+but often the logic is much more complex and doing so requires the use of a stack. 
+In fact, recursion itself uses a stack: the function stack. */
+
+function foo(i) {
+  if (i < 0)
+    return;
+  console.log('begin: ' + i);
+  foo(i - 1);
+  console.log('end: ' + i);
+}
+foo(3);
+
+// Output:
+
+// begin: 3
+// begin: 2
+// begin: 1
+// begin: 0
+// end: 0
+// end: 1
+// end: 2
+// end: 3
