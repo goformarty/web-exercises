@@ -306,6 +306,12 @@ foo(3);
 // end: 2
 // end: 3
 
+
+// DO ... WHILE STATEMENT
+/* The do...while statement creates a loop that executes a specified statement 
+until the test condition evaluates to false. The condition is evaluated after 
+executing the statement, resulting in the specified statement executing at least once. */
+
 var slaying = true;
 // A bit of new math magic to calculate the odds
 // of hitting the dragon. We'll cover this soon!
