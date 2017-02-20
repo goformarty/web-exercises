@@ -363,3 +363,66 @@ while (slaying) {
     slaying = false;
   }
 }
+
+
+// SWITCH
+
+//SYNTAX
+switch (expression) {
+  case value1:
+    //Statements executed when the result of expression matches value1
+    [break;]
+  case value2:
+    //Statements executed when the result of expression matches value2
+    [break;]
+  ...
+  case valueN:
+    //Statements executed when the result of expression matches valueN
+    [break;]
+  default:
+    //Statements executed when none of the values match the value of the expression
+    [break;]
+}
+
+/* --> expression
+An expression whose result is matched against each case clause.
+--> case valueN
+A case clause used to match against expression. 
+
+DEFINITION
+A switch statement first evaluates its expression. 
+It then looks for the first case clause whose expression evaluates to the same value 
+as the result of the input expression (using strict comparison, ===) and transfers control to that clause, 
+executing the associated statements. 
+(If multiple cases match the provided value, the first case that matches is selected, 
+even if the cases are not equal to each other.) If no matching case clause is found, 
+the program looks for the optional default clause, and if found, transfers control to that clause, 
+executing the associated statements. If no default clause is found, the program continues execution 
+at the statement following the end of switch. By convention, the default clause is the last clause, 
+but it does not need to be so.
+
+The optional break statement associated with each case label ensures that the program breaks out of switch once 
+the matched statement is executed and continues execution at the statement following switch. 
+If break is omitted, the program continues execution at the next statement in the switch statement.*/
+
+
+//EXAMPLE
+
+var lunch = prompt("What do you want for lunch?","Type your lunch choice here");
+
+switch(lunch){
+  case 'sandwich':
+    console.log("Sure thing! One sandwich, coming up.");
+    break;
+  case 'soup':
+    console.log("Got it! Tomato's my favorite.");
+    break;
+  case 'salad':
+    console.log("Sounds good! How about a caesar salad?");
+    break;
+  case 'pie':
+    console.log("Pie's not a meal!");
+    break;
+  default:
+    console.log("Huh! I'm not sure what " + lunch + " is. How does a sandwich sound?");
+}
