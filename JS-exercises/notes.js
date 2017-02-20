@@ -312,6 +312,34 @@ foo(3);
 until the test condition evaluates to false. The condition is evaluated after 
 executing the statement, resulting in the specified statement executing at least once. */
 
+/* SYNTAX
+do
+   statement
+while (condition); 
+
+--> statement
+A statement that is executed at least once and is re-executed each time the condition evaluates to true. 
+To execute multiple statements within the loop, use a block statement ({ ... }) to group those statements.
+
+--> condition
+An expression evaluated after each pass through the loop. If condition evaluates to true, the statement is re-executed. 
+When condition evaluates to false, control passes to the statement following the do...while.
+*/
+
+// EXAMPLE 
+// <div id="example"></div>
+
+var result = '';
+var i = 0;
+do {
+   i += 1;
+   result += i + ' ';
+} while (i < 5);
+document.getElementById('example').innerHTML = result;
+
+
+// DRAGON SLAYER GAME
+
 var slaying = true;
 // A bit of new math magic to calculate the odds
 // of hitting the dragon. We'll cover this soon!
