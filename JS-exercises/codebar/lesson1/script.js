@@ -4,10 +4,10 @@ function hello(person) {
 	console.log("Hello " + person + "!");
 }
 
-function conversation(person) {
+function conversation(person, topic) {
 	hello(person);
 	console.log('How are you?');
-	console.log('Goodbye!');
+	console.log('Do you like ' + topic + '?');
 }
 
 function greeting(person) {
