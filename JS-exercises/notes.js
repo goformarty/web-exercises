@@ -426,3 +426,22 @@ switch(lunch){
   default:
     console.log("Huh! I'm not sure what " + lunch + " is. How does a sandwich sound?");
 }
+
+// ARRAYS
+/*
+The JavaScript Array object is a global object that is used in the construction of arrays;
+which are high-level, list-like objects.
+
+CREATE AN ARRAY
+*/
+var fruits = ['Apple', 'Banana'];
+
+console.log(fruits.length);
+// 2
+
+// ACCESS (INDEX INTO) AN ARRAY ITEM
+var first = fruits[0];
+// Apple
+
+var last = fruits[fruits.length - 1];
+// Banana
