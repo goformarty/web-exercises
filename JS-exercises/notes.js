@@ -445,3 +445,28 @@ var first = fruits[0];
 
 var last = fruits[fruits.length - 1];
 // Banana
+
+/*
+Arrays are list-like objects whose prototype has methods to perform traversal and mutation operations. 
+Neither the length of a JavaScript array nor the types of its elements are fixed. 
+Since an array's length can change at any time, and data can be stored at non-contiguous locations in the array, 
+JavaScript arrays are not guaranteed to be dense; this depends on how the programmer chooses to use them. 
+In general, these are convenient characteristics; but if these features are not desirable for your particular use, 
+you might consider using typed arrays.
+
+Some people think that you shouldn't use an array as an associative array. 
+In any case, you can use plain objects instead, although doing so comes with its own caveats. 
+See the post Lightweight JavaScript dictionaries with arbitrary keys as an example.
+
+Accessing array elements
+
+JavaScript arrays are zero-indexed: the first element of an array is at index 0, 
+and the last element is at the index equal to the value of the array's length property minus 1.
+*/
+
+var arr = ['this is the first element', 'this is the second element'];
+console.log(arr[0]);              // logs 'this is the first element'
+console.log(arr[1]);              // logs 'this is the second element'
+console.log(arr[arr.length - 1]); // logs 'this is the second element'
+
+
