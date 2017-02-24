@@ -469,4 +469,14 @@ console.log(arr[0]);              // logs 'this is the first element'
 console.log(arr[1]);              // logs 'this is the second element'
 console.log(arr[arr.length - 1]); // logs 'this is the second element'
 
+/*
+Array elements are object properties in the same way that toString is a property, 
+but trying to access an element of an array as follows throws a syntax error, 
+because the property name is not valid:
+*/
+
+console.log(arr.0); // a syntax error
+
+
+
 
