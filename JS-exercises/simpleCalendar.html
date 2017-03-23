@@ -3,8 +3,46 @@
 <head>
 	<meta charset="UTF-8">
 	<title>A simple calendar</title>
+	<style>
+	.output * {
+		box-sizing: border-box;
+	}
+
+	.output ul {
+		padding-left: 0;
+	}
+
+	.output li {
+		display: block;
+		float: left;
+		width: 25%;
+		border: 2px solid white;
+		padding: 5px;
+		height: 40px;
+		background-color: #4A2DB6;
+		color: white;
+	}
+	</style>
 </head>
 <body>
-	
+	<div class="output" style="height: 500px;overflow: auto;">
+		<label for="month">Select month: </label>
+		<select id="month">
+			<option value="January">January</option>
+			<option value="February">February</option>
+			<option value="March">March</option>
+			<option value="April">April</option>
+			<option value="May">May</option>
+			<option value="June">June</option>
+			<option value="July">July</option>
+			<option value="August">August</option>
+			<option value="September">September</option>
+			<option value="October">October</option>
+			<option value="November">November</option>
+			<option value="December">December</option>
+		</select>
+		<h1></h1>
+		<ul></ul>
+	</div>
 </body>
 </html>
