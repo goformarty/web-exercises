@@ -20,7 +20,14 @@
         var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
         document.body.style.backgroundColor = rndCol;
       }
-      btn.onmouseout = bgChange;    
+      //btn.onmouseover = bgChange;   
+      //btn.onmouseout = bgChange;   
+      //btn.onfocus = bgChange;
+      //btn.onblur = bgChange;    
+      //btn.ondblclick = bgChange; 
+      //window.onkeypress = bgChange; 
+      //window.onkeydown = bgChange; 
+      window.onkeyup = bgChange; 
     </script>
   </body>
 </html>
