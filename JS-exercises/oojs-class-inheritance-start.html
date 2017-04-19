@@ -22,16 +22,13 @@
   btn.onclick = function() {
     var code = input.value;
     para.textContent = eval(code);
-  }
+  };
   function Person(first, last, age, gender, interests) {
-    this.name = {
-      first,
-      last
-    };
+    this.name = {first,last};
     this.age = age;
     this.gender = gender;
     this.interests = interests;
-  };
+  }
   Person.prototype.bio = function() {
         // First define a string, and make it equal to the part of
         // the bio that we know will always be the same.
@@ -103,5 +100,24 @@
       };
 
       var teacher1 = new Teacher('Dave', 'Griffiths', 31, 'male', ['football', 'cookery'], 'mathematics');
+
+       function Student(first, last, age, gender, interests, year) {
+        Person.call(this, first, last, age, gender, interests);
+        this.year = year;
+      }
+
+
+
+      Student.prototype = Object.create(Person.prototype);
+      Student.prototype.constructor = Student;
+      Student.prototype.greeting = function() {
+        alert('Hello. My name is ' + this.name.first + ', and I am from class ' + this.year + '.');
+      };
+
+      var student1 = new Student('Dave', 'Griffiths', 16, 'male', ['football', 'cookery'], '2016');
+
+
     </script>
+
+
     </html>
