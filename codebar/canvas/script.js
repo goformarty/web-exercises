@@ -16,8 +16,6 @@ function draw() {
  context.moveTo(0,300);
  context.lineTo(400,500);
 
- context.beginPath();
-
  context.lineWidth = 1;
  context.strokeStyle = 'purple';
 
@@ -26,8 +24,16 @@ function draw() {
  context.lineTo(200,200);
  context.lineTo(200,10);
  context.lineTo(10,10);
-
  context.stroke();
+
+ context.beginPath();
+ context.arc(200, 100, 50, 0, Math.PI*2, true);
+ context.closePath();
+ context.lineWidth = 4;
+ context.stroke();
+ context.fill();
+
+ context.rotate(10*Math.PI/180);
 
 }
 
