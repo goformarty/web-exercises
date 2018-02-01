@@ -9,10 +9,27 @@
 
 function confirmEnding(str, target) {
 	var substrLength = target.length;
-	if(str.substr(- substrLength) === target) {
-	  return true;
+	if (str.substr(-substrLength) === target) {
+		return true;
 	}
 	return false;
+}
+
+confirmEnding("Bastian", "n");
+
+
+
+
+// Repeat a given string(first argument) num times(second argument).
+// Return an empty string
+// if num is not a positive number.
+
+function repeatStringNumTimes(str, num) {
+	if (num < 0) {
+	  return '';
+	}
+	var arr = new Array(num).fill(str);
+	return arr.join('');
   }
   
-  confirmEnding("Bastian", "n");
+  repeatStringNumTimes("abc", 3);
